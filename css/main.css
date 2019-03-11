@@ -1895,7 +1895,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #f7bb88;
+  background: #f6ffff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3172,4 +3172,19 @@ ul.breadcrumb li+li:last-child {
   .pagination {
     margin: 8px 0 0;
   }
+}
+.heimu,
+.heimu a {
+  background-color: #252525;
+  color: #252525;
+  text-shadow: none;
+}
+::selection {
+  background: #9ab0c0;
+  color: #fff;
+}
+.heimu:hover,
+.heimu:hover a {
+  transition: color 0.13s linear;
+  color: #fff;
 }
