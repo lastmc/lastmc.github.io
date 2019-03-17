@@ -98,21 +98,25 @@
 
 
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Tags">
-<meta property="og:url" content="http://yoursite.com/tags/index.html">
+  <meta name="description" content="写在前面Warshall算法，是用于计算一张图的传递闭包的一种快速的算法。原理很好理解，然而我一直不理解他的正确性。不过，经过一番苦思冥想，我终于理解了Warshall算法。">
+<meta name="keywords" content="算法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何理解Warshall算法">
+<meta property="og:url" content="http://yoursite.com/2019/03/17/如何理解Warshall算法/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="写在前面Warshall算法，是用于计算一张图的传递闭包的一种快速的算法。原理很好理解，然而我一直不理解他的正确性。不过，经过一番苦思冥想，我终于理解了Warshall算法。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-03-11T00:00:53.752Z">
+<meta property="og:updated_time" content="2019-03-17T13:11:59.784Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Tags">
+<meta name="twitter:title" content="如何理解Warshall算法">
+<meta name="twitter:description" content="写在前面Warshall算法，是用于计算一张图的传递闭包的一种快速的算法。原理很好理解，然而我一直不理解他的正确性。不过，经过一番苦思冥想，我终于理解了Warshall算法。">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/tags/">
+  <link rel="canonical" href="http://yoursite.com/2019/03/17/如何理解Warshall算法/">
 
 
 
@@ -122,7 +126,7 @@
   };
 </script>
 
-  <title>Tags | Hexo</title>
+  <title>如何理解Warshall算法 | Hexo</title>
   
 
 
@@ -225,7 +229,7 @@
         
         
           
-          <li class="menu-item menu-item-tags menu-item-active">
+          <li class="menu-item menu-item-tags">
 
     
     
@@ -301,89 +305,226 @@
           
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
           
           <div id="content" class="content">
             
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/17/如何理解Warshall算法/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="LastMC">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-<h1 class="post-title" itemprop="name headline">Tags
-
-</h1>
-
-<div class="post-meta">
-  
-  
-
-
-
-</div>
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <div class="tag-cloud">
-            <div class="tag-cloud-title">
+          <h1 class="post-title" itemprop="name headline">如何理解Warshall算法
+
               
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
               
                 
-                  
+              
+
+              <time title="创建时间：2019-03-17 19:07:14 / 修改时间：21:11:59" itemprop="dateCreated datePublished" datetime="2019-03-17T19:07:14+08:00">2019-03-17</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Tech/" itemprop="url" rel="index"><span itemprop="name">Tech</span></a></span>
+
+                
                 
               
-                
-                  
-                
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
               
-              目前共计 2 个标签
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">1.5k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">2 分钟</span>
+              
             </div>
-            <div class="tag-cloud-tags">
-              
-                <a href="/tags/CSS/" style="font-size: 12px; color: #ccc">CSS</a> <a href="/tags/算法/" style="font-size: 12px; color: #ccc">算法</a>
-              
-            </div>
-          </div>
-        
-      </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <h4 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h4><p>Warshall算法，是用于计算一张图的传递闭包的一种快速的算法。原理很好理解，然而我一直不理解他的正确性。不过，经过一番苦思冥想，我终于理解了Warshall算法。</p>
+<a id="more"></a>
+<h4 id="算法原理"><a href="#算法原理" class="headerlink" title="算法原理"></a>算法原理</h4><p>对一个图G，图中两个点$ v_i $与$ v_j $是否相邻，只需要计算是否存在$ k $，使得存在$ v_i $到$ v_k $的道路和$ v_j $到$ v_k $的道路都存在</p>
+<p>简而言之就是如下代码</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;n;j++)</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> k=<span class="number">0</span>;k&lt;n;k++)</span><br><span class="line">            a[j][k]=a[j][k] || (a[j][i] &amp;&amp; a[i][k]);</span><br></pre></td></tr></table></figure>
+<p>很好理解，就是 $ j $ 到 $ k $ 的道路的存在性取决于是否存在 $ i $ 使得 $ j $ 到 $ i $ 的道路存在或者 $ i $ 到 $ k $ 的道路存在，然而，我一直不能理解的是，为什么这样可以确保计算 $ a_{jk} $ 的时候 $ a_{ji} $ 与 $ a_{ik} $都已经被计算了呢？原因如下</p>
+<h4 id="原因解释"><a href="#原因解释" class="headerlink" title="原因解释"></a>原因解释</h4><p>考虑一下算法的循环嵌套顺序，第一重循环是 $ i $ 的循环。这里就很讲究。 $ i $ 为0的时候干了什么呢？后面两重循环走完之后，保证了所有与 $ i $ 距离为1的点之间的通路全部计算好了，也就是说，在 $ i $ 和 $ N(i) $（ $ i $ 的邻居结点）的子图中这个算法已经完成了。 $ i $ 为1的时候，也将  $ i $ 和 $ N(i) $ 的子图中完成了这个算法，这里注意，由于0号和0号的邻居已经完成了算法，所以 $ i=1 $ 执行完之后，所有与0与1距离为1的点之间，已经完成了传递闭包的构建（此处的构建，只包括 $ x - 0 - 1 - y $ 这一类路径的构建，因为在0的一步中，完成了 $ x $ 与 1 的连接，所以此处能够顺利完成 $ x $ 与 $ y $ 的连接。而在 $ x - 0 - a - 1 - y $ 的路径中，先完成的是 $ x $ 与 $ a $ 的连接， $ a $ 与 $ y $ 的连接，在 $ i=a $ 的时候才完成 $ x $ 与 $ y $ 的连接）。所以，当 $ i $ 遍历每个点的时候，就完成了整个图传递闭包的构建。</p>
+<h4 id="写在后面"><a href="#写在后面" class="headerlink" title="写在后面"></a>写在后面</h4><p>一瞬间突然理解一个算法的时候，这种感觉是无比美妙的，就像多年前在游泳的时候，突然理解了 01 背包问题，那个时候甚至兴奋地想从泳池飞上天际。</p>
+<p><del>是做梦了</del> </p>
+<p>顺便，鉴于本人语文太菜，如果有表述不清，请务必告知本人，将进一步修改。</p>
+<h4 id="一点题外话"><a href="#一点题外话" class="headerlink" title="一点题外话"></a>一点题外话</h4><p>Hexo 默认不渲染数学公式，在配置文件中有math一项，将enable改为true，但此时只有在Front Matter中显示指出<em>mathjax: true</em>的才会进行数学公式渲染。把per_page改为true即可解决问题。</p>
+<p><span class="heimu" title="这就是欲盖弥彰">这篇文章的建立时间是19：00左右，现在已经20：53了，之所以花费了如此久的时间，是因为有人向我提出了一个C++编译问题，我就重新编译了一遍我的源代码，发现我重载过的流运算符，DevCpp居然告诉我未定义！我用WSL下的g++进行了编译，通过了，用DevCpp提供的MinGW编译，也通过了，我不由得沉思以及愤怒。DevCpp实在是麻烦了我的编程进度，虽然它的调试有时候挺方便的，但也错误不少。所以，以后我决定放弃DevCpp，就算输出调试再麻烦也绝不使用DevCpp<span class="heimu" title="这就是欲盖弥彰">再用DevCpp我就是狗🐶</span></span></p>
+
       
     </div>
-    
-
-
 
     
+
     
     
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/算法/" rel="tag"># 算法</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/03/11/如何实现黑幕/" rel="next" title="如何实现黑幕">
+                <i class="fa fa-chevron-left"></i> 如何实现黑幕
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
   </div>
 
 
@@ -412,8 +553,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -507,6 +657,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#写在前面"><span class="nav-number">1.</span> <span class="nav-text">写在前面</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#算法原理"><span class="nav-number">2.</span> <span class="nav-text">算法原理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#原因解释"><span class="nav-number">3.</span> <span class="nav-text">原因解释</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#写在后面"><span class="nav-number">4.</span> <span class="nav-text">写在后面</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#一点题外话"><span class="nav-number">5.</span> <span class="nav-text">一点题外话</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
